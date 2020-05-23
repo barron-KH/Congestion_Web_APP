@@ -1,6 +1,6 @@
-#--------------------------- Congestion_Web_APP -----------------------------
+# --------------------------- Congestion_Web_APP -----------------------------
 
-##-------------------------- Contexte et l’objectif du projet --------------------------
+## -------------------------- Contexte et l’objectif du projet --------------------------
 
 Le projet consiste à réaliser une application web qui informatise la gestion de congé dans l’objectif de faciliter la gestion de l’entreprise, faciliter les services de chaque utilisateur et améliorer les processus de cette dernière.
 
