@@ -51,7 +51,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
                         <input type="password" name="password" class="form-control" placeholder="Password" required>
                      </div>
                      <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
-					 <div class="result_msg"></div>
+					 <div class="result_msg"><?php echo $msg?></div>
 					</form>
                </div>
             </div>
