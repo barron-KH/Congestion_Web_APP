@@ -1,4 +1,18 @@
-
+<?php
+require('db.php');
+$msg="";
+if(isset($_POST['email']) && isset($_POST['password'])){
+	$email=mysqli_real_escape_string($con,$_POST['email']);
+	$password=mysqli_real_escape_string($con,$_POST['password']);
+	$res=mysqli_query($con,"select * from employee where email='$email' and password='$password'");
+	$count=mysqli_num_rows($res);
+	if($count>0){
+        echo "yes";
+	}else{
+		$msg="Please enter correct login details";
+	}
+}
+?>
 <!doctype html>
 <html class="no-js" lang="">
    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
