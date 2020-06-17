@@ -31,13 +31,13 @@ if(!isset($_SESSION['ROLE'])){
                   <li class="menu-title">Menu</li>
                   <?php if($_SESSION['ROLE']==1){ ?>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="index.php" > Department Master</a>
+                     <a href="index.php" > Department</a>
                   </li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="leave_type.php" > Leave Type Master</a>
+                     <a href="leave_type.php" > Leave Type</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="employee.php" > Employee Master</a>
+                     <a href="employee.php" > Employee</a>
                   </li>
 				  <?php } else { ?>
 				  <li class="menu-item-has-children dropdown">
@@ -55,7 +55,7 @@ if(!isset($_SESSION['ROLE'])){
          <header id="header" class="header">
             <div class="top-left">
                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="Logo"></a>
+                  <a class="navbar-brand" href="index.php">congestion</a>
                   <a class="navbar-brand hidden" href="index.php"><img src="images/logo2.png" alt="Logo"></a>
                   <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                </div>
