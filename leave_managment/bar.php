@@ -1,5 +1,9 @@
 <?php
 require('db.php');
+if(!isset($_SESSION['ROLE'])){
+	header('location:login.php');
+	die();
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -25,6 +29,7 @@ require('db.php');
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                <ul class="nav navbar-nav">
                   <li class="menu-title">Menu</li>
+                  <?php if($_SESSION['ROLE']==1){ ?>
 				  <li class="menu-item-has-children dropdown">
                      <a href="index.php" > Department Master</a>
                   </li>
@@ -34,10 +39,11 @@ require('db.php');
 				  <li class="menu-item-has-children dropdown">
                      <a href="employee.php" > Employee Master</a>
                   </li>
+				  <?php } else { ?>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="add_employee.php?id="> Profile</a>
+                     <a href="add_employee.php?id=<?php echo $_SESSION['USER_ID']?>" > Profile</a>
                   </li>
-				  
+				  <?php } ?>
 				   <li class="menu-item-has-children dropdown">
                      <a href="leave.php" > Leave</a>
                   </li>
@@ -57,7 +63,7 @@ require('db.php');
             <div class="top-right">
                <div class="header-menu">
                   <div class="user-area dropdown float-right">
-                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome</a>
+                     <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome <?php echo $_SESSION['USER_NAME']?></a>
                      <div class="user-menu dropdown-menu">
                         <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>Logout</a>
                      </div>
