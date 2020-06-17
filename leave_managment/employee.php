@@ -16,7 +16,7 @@ $res=mysqli_query($con,"select * from employee where role=2 order by id desc");
                   <div class="col-xl-12">
                      <div class="card">
                         <div class="card-body">
-                           <h4 class="box-title">Employee Master </h4>
+                           <h4 class="box-title">Employee </h4>
 						   <h4 class="box_title_link"><a href="add_employee.php">Add Employee</a> </h4>
                         </div>
                         <div class="card-body--">

@@ -38,7 +38,7 @@ if(!isset($_SESSION['ROLE'])){
                   </li>
 				  <li class="menu-item-has-children dropdown">
                      <a href="employee.php" > Employee</a>
-                  </li>
+               src
 				  <?php } else { ?>
 				  <li class="menu-item-has-children dropdown">
                      <a href="add_employee.php?id=<?php echo $_SESSION['USER_ID']?>" > Profile</a>
@@ -55,7 +55,7 @@ if(!isset($_SESSION['ROLE'])){
          <header id="header" class="header">
             <div class="top-left">
                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php">congestion</a>
+                  <a class="navbar-brand" href="index.php">Congestion</a>
                   <a class="navbar-brand hidden" href="index.php"><img src="images/logo2.png" alt="Logo"></a>
                   <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                </div>

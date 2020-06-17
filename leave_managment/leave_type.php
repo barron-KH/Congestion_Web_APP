@@ -16,7 +16,7 @@ $res=mysqli_query($con,"select * from leave_type order by id desc");
                   <div class="col-xl-12">
                      <div class="card">
                         <div class="card-body">
-                           <h4 class="box-title">Leave Type Master </h4>
+                           <h4 class="box-title">Leave Type</h4>
 						   <h4 class="box_title_link"><a href="add_leave_type.php">Add Leave Type</a> </h4>
                         </div>
                         <div class="card-body--">
@@ -24,7 +24,7 @@ $res=mysqli_query($con,"select * from leave_type order by id desc");
                               <table class="table ">
                                  <thead>
                                     <tr>
-                                       <th width="5%">S.No</th>
+                                       <th width="5%">number</th>
                                        <th width="5%">ID</th>
                                        <th width="70%">Leave Type</th>
                                        <th width="20%"></th>

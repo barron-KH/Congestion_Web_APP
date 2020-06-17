@@ -7,7 +7,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	$res=mysqli_query($con,"select * from employee where email='$email' and password='$password'");
 	$count=mysqli_num_rows($res);
 	if($count>0){
-      $row=mysqli_fetch_assoc($res);
+		$row=mysqli_fetch_assoc($res);
 		$_SESSION['ROLE']=$row['role'];
 		$_SESSION['USER_ID']=$row['id'];
 		$_SESSION['USER_NAME']=$row['name'];
@@ -34,16 +34,17 @@ if(isset($_POST['email']) && isset($_POST['password'])){
       <link rel="stylesheet" href="src/css/flag-icon.min.css">
       <link rel="stylesheet" href="src/css/cs-skin-elastic.css">
       <link rel="stylesheet" href="src/css/style.css">
+      <link rel="stylesheet" href="src/css/main.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
    </head>
-   <body class="bg-dark">
+   <body class="bg">
       <div class="sufee-login d-flex align-content-center flex-wrap">
          <div class="container">
             <div class="login-content">
                <div class="login-form mt-150">
                   <form method="post">
                      <div class="form-group">
-                        <label>Email address</label>
+                        <label>Email</label>
                         <input type="email" name="email" class="form-control" placeholder="Email" required>
                      </div>
                      <div class="form-group">

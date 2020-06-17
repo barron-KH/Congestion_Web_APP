@@ -16,7 +16,7 @@ $res=mysqli_query($con,"select * from department order by id desc");
                   <div class="col-xl-12">
                      <div class="card">
                         <div class="card-body">
-                           <h4 class="box-title">Department Master </h4>
+                           <h4 class="box-title">Department </h4>
 						   <h4 class="box_title_link"><a href="add_department.php">Add Department</a> </h4>
                         </div>
                         <div class="card-body--">
@@ -24,7 +24,7 @@ $res=mysqli_query($con,"select * from department order by id desc");
                               <table class="table ">
                                  <thead>
                                     <tr>
-                                       <th width="5%">Number</th>
+                                       <th width="5%">number</th>
                                        <th width="5%">ID</th>
                                        <th width="70%">Department Name</th>
                                        <th width="20%"></th>

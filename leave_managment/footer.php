@@ -3,10 +3,10 @@
             <div class="footer-inner bg-white">
                <div class="row">
                   <div class="col-sm-6">
-                     Copyright &copy; 2018 KH.B
+                     Copyright &copy; 2020 KH
                   </div>
                   <div class="col-sm-6 text-right">
-                     Designed by <a>KH</a>
+                     Designed by <a>B.KHALIL</a>
                   </div>
                </div>
             </div>
