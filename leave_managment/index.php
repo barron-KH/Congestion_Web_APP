@@ -1,5 +1,14 @@
 <?php
 require('bar.php');
+if($_SESSION['ROLE']!=1){
+	header('location:add_employee.php?id='.$_SESSION['USER_ID']);
+	die();
+}
+if(isset($_GET['type']) && $_GET['type']=='delete' && isset($_GET['id'])){
+	$id=mysqli_real_escape_string($con,$_GET['id']);
+	mysqli_query($con,"delete from department where id='$id'");
+}
+$res=mysqli_query($con,"select * from department order by id desc");
 ?>
 <div class="content pb-0">
             <div class="orders">
@@ -21,6 +30,20 @@ require('bar.php');
                                        <th width="20%"></th>
                                     </tr>
                                  </thead>
+                                 <tbody>
+                                    <?php 
+									$i=1;
+									while($row=mysqli_fetch_assoc($res)){?>
+									<tr>
+                                       <td><?php echo $i?></td>
+									   <td><?php echo $row['id']?></td>
+                                       <td><?php echo $row['department']?></td>
+									   <td><a href="add_department.php?id=<?php echo $row['id']?>">Edit</a> <a href="index.php?id=<?php echo $row['id']?>&type=delete">Delete</a></td>
+                                    </tr>
+									<?php 
+									$i++;
+									} ?>
+                                 </tbody>
                               </table>
                            </div>
                         </div>
